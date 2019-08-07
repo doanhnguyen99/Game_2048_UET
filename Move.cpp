@@ -1,45 +1,44 @@
 
 #include "Move.h"
-//#include "Variable.h"
 // Move down
 void Down(int a[][4], int &sum)
 {
 
 	for (int col = 0; col < 4; col++)
 	{
-		vector<int> tmp1;
-		vector<int> tmp2;
+		vector<int> SaveElementExist;
+		vector<int> Result;
 		for (int i = 3; i > -1; i--)
 		{
 			if (a[i][col] != 0)
 			{
-				tmp1.push_back(a[i][col]);
+				SaveElementExist.push_back(a[i][col]);
 			}
 		}
 
-		if (tmp1.size() > 0)
+		if (SaveElementExist.size() > 0)
 		{
-			for (int i = 0; i < tmp1.size() - 1; i++)
+			for (int i = 0; i < SaveElementExist.size() - 1; i++)
 			{
-				if (tmp1[i] == tmp1[i + 1] && tmp1[i] != 0)
+				if (SaveElementExist[i] == SaveElementExist[i + 1] && SaveElementExist[i] != 0)
 				{
-					tmp1[i] *= 2;
-					tmp1[i + 1] = 0;
-					sum += tmp1[i];
+					SaveElementExist[i] *= 2;
+					SaveElementExist[i + 1] = 0;
+					sum += SaveElementExist[i];
 				}
 			}
 
-			for (int i = 0; i < tmp1.size(); i++)
+			for (int i = 0; i < SaveElementExist.size(); i++)
 			{
-				if (tmp1[i] != 0) tmp2.push_back(tmp1[i]);
+				if (SaveElementExist[i] != 0) Result.push_back(SaveElementExist[i]);
 			}
 
 
-			if (tmp2.size() < 4)
+			if (Result.size() < 4)
 				for (int i = 0; i < 4; i++)
 				{
-					if (3 - i < tmp2.size())
-						a[i][col] = tmp2[3 - i]; else a[i][col] = 0;
+					if (3 - i < Result.size())
+						a[i][col] = Result[3 - i]; else a[i][col] = 0;
 				}
 		}
 
@@ -52,39 +51,39 @@ void Left(int a[][4], int& sum)
 
 	for (int row = 0; row < 4; row++)
 	{
-		vector<int> tmp1;
-		vector<int> tmp2;
+		vector<int> SaveElementExist;
+		vector<int> Result;
 		for (int i = 0; i < 4; i++)
 		{
 			if (a[row][i] != 0)
 			{
-				tmp1.push_back(a[row][i]);
+				SaveElementExist.push_back(a[row][i]);
 			}
 		}
 
-		if (tmp1.size() > 0)
+		if (SaveElementExist.size() > 0)
 		{
-			for (int i = 0; i < tmp1.size() - 1; i++)
+			for (int i = 0; i < SaveElementExist.size() - 1; i++)
 			{
-				if (tmp1[i] == tmp1[i + 1] && tmp1[i] != 0)
+				if (SaveElementExist[i] == SaveElementExist[i + 1] && SaveElementExist[i] != 0)
 				{
-					tmp1[i] *= 2;
-					tmp1[i + 1] = 0;
-					sum += tmp1[i];
+					SaveElementExist[i] *= 2;
+					SaveElementExist[i + 1] = 0;
+					sum += SaveElementExist[i];
 				}
 			}
 
-			for (int i = 0; i < tmp1.size(); i++)
+			for (int i = 0; i < SaveElementExist.size(); i++)
 			{
-				if (tmp1[i] != 0) tmp2.push_back(tmp1[i]);
+				if (SaveElementExist[i] != 0) Result.push_back(SaveElementExist[i]);
 			}
 
 
-			if (tmp2.size() < 4)
+			if (Result.size() < 4)
 				for (int i = 0; i < 4; i++)
 				{
-					if (i < tmp2.size())
-						a[row][i] = tmp2[i]; else a[row][i] = 0;
+					if (i < Result.size())
+						a[row][i] = Result[i]; else a[row][i] = 0;
 				}
 		}
 
@@ -98,39 +97,39 @@ void Right(int a[][4], int &sum)
 
 	for (int row = 0; row < 4; row++)
 	{
-		vector<int> tmp1;
-		vector<int> tmp2;
+		vector<int> SaveElementExist;
+		vector<int> Result;
 		for (int i = 3; i > -1; i--)
 		{
 			if (a[row][i] != 0)
 			{
-				tmp1.push_back(a[row][i]);
+				SaveElementExist.push_back(a[row][i]);
 			}
 		}
 
-		if (tmp1.size() > 0)
+		if (SaveElementExist.size() > 0)
 		{
-			for (int i = 0; i < tmp1.size() - 1; i++)
+			for (int i = 0; i < SaveElementExist.size() - 1; i++)
 			{
-				if (tmp1[i] == tmp1[i + 1] && tmp1[i] != 0)
+				if (SaveElementExist[i] == SaveElementExist[i + 1] && SaveElementExist[i] != 0)
 				{
-					tmp1[i] *= 2;
-					tmp1[i + 1] = 0;
-					sum += tmp1[i];
+					SaveElementExist[i] *= 2;
+					SaveElementExist[i + 1] = 0;
+					sum += SaveElementExist[i];
 				}
 			}
 
-			for (int i = 0; i < tmp1.size(); i++)
+			for (int i = 0; i < SaveElementExist.size(); i++)
 			{
-				if (tmp1[i] != 0) tmp2.push_back(tmp1[i]);
+				if (SaveElementExist[i] != 0) Result.push_back(SaveElementExist[i]);
 			}
 
 
-			if (tmp2.size() < 4)
+			if (Result.size() < 4)
 				for (int i = 0; i < 4; i++)
 				{
-					if (3 - i < tmp2.size())
-						a[row][i] = tmp2[3 - i]; else a[row][i] = 0;
+					if (3 - i < Result.size())
+						a[row][i] = Result[3 - i]; else a[row][i] = 0;
 				}
 		}
 	}
@@ -144,39 +143,39 @@ void Up(int a[][4], int& sum)
 
 		for (int col = 0; col < 4; col++)
 		{
-			vector<int> tmp1;
-			vector<int> tmp2;
+			vector<int> SaveElementExist;
+			vector<int> Result;
 			for (int i = 0; i < 4; i++)
 			{
 				if (a[i][col] != 0)
 				{
-					tmp1.push_back(a[i][col]);
+					SaveElementExist.push_back(a[i][col]);
 				}
 			}
 
-			if (tmp1.size() > 0)
+			if (SaveElementExist.size() > 0)
 			{
-				for (int i = 0; i < tmp1.size() - 1; i++)
+				for (int i = 0; i < SaveElementExist.size() - 1; i++)
 				{
-					if (tmp1[i] == tmp1[i + 1] && tmp1[i] != 0)
+					if (SaveElementExist[i] == SaveElementExist[i + 1] && SaveElementExist[i] != 0)
 					{
-						tmp1[i] *= 2;
-						tmp1[i + 1] = 0;
-						sum += tmp1[i];
+						SaveElementExist[i] *= 2;
+						SaveElementExist[i + 1] = 0;
+						sum += SaveElementExist[i];
 					}
 				}
 
-				for (int i = 0; i < tmp1.size(); i++)
+				for (int i = 0; i < SaveElementExist.size(); i++)
 				{
-					if (tmp1[i] != 0) tmp2.push_back(tmp1[i]);
+					if (SaveElementExist[i] != 0) Result.push_back(SaveElementExist[i]);
 				}
 
 
-				if (tmp2.size() < 4)
+				if (Result.size() < 4)
 					for (int i = 0; i < 4; i++)
 					{
-						if (i < tmp2.size())
-							a[i][col] = tmp2[i]; else a[i][col] = 0;
+						if (i < Result.size())
+							a[i][col] = Result[i]; else a[i][col] = 0;
 					}
 			}
 

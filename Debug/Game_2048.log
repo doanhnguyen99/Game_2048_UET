@@ -1,0 +1,9 @@
+﻿  Source.cpp
+C:\Users\Doanh Nguyen\Desktop\Game_SFML\Game_2048\Game_2048\Source.cpp(38): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Doanh Nguyen\Desktop\Game_SFML\Game_2048\Game_2048\Source.cpp(57): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Doanh Nguyen\Desktop\Game_SFML\Game_2048\Game_2048\Source.cpp(67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Doanh Nguyen\Desktop\Game_SFML\Game_2048\Game_2048\Source.cpp(95): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Doanh Nguyen\Desktop\Game_SFML\Game_2048\Game_2048\Source.cpp(273): warning C4101: 'tempPoint': unreferenced local variable
+  checkWin.cpp
+  Generating Code...
+  Game_2048.vcxproj -> C:\Users\Doanh Nguyen\Desktop\Game_SFML\Game_2048\Debug\Game_2048.exe
